@@ -41,8 +41,8 @@ function onGutterClick(cm, line, gutter) {
 });
 function hasBreakPoint(cm, line, gutter){
 console.log("8");
-var info = cm.lineInfo(5);
-if(info.gutterMarkers===null)
+var info = cm.lineInfo(line);
+if(info.gutterMarkers==null)
 	return false;
 else
 	return true;

@@ -38,13 +38,15 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 });
 console.log("2");
 
-function checkBreak(){
-hasBreakPoint();
+function checkBreak(line){
+console.log("Checking Line Number: "+line);
+//cm = this;
+console.log(hasBreakPoint(editor,line));
 }
 
 
 </textarea></form>
-<input id="click" type="button" value="test button" onclick="checkBreak();" />
+<input id="click" type="button" value="test button" onclick="checkBreak(5);" />
 <p>Click the line-number gutter to add or remove 'breakpoints'.</p>
 
     <script>eval(document.getElementById("code").value);</script>
